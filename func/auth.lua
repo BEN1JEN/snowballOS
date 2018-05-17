@@ -9,3 +9,5 @@ function auth.authenticate(user, password)
 
 	return login
 end
+
+return auth
