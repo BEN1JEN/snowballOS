@@ -1,9 +1,19 @@
-auth = require "func/auth"
-login = require "func/login"
-process = require "func/process"
+function love.load()
+	auth = require "lib/auth"
+	login = require "bin/login"
+	process = require "lib/process"
+	sha256 = require "lib/sha256"
+end
 
-while true do
+function love.update()
 
 	process.update()
+
+end
+
+function love.draw()
+
+	windowCanvases = process.renderCanvases()
+	window.drawWindows(windowCanvases)
 
 end
